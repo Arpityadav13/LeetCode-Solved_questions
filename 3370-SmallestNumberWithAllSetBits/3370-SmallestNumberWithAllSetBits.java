@@ -1,14 +1,12 @@
-// Last updated: 10/29/2025, 9:15:37 PM
+// Last updated: 10/29/2025, 9:18:23 PM
 class Solution {
     public int smallestNumber(int n) {
-        String binary = Integer.toBinaryString(n);
-        String p ="";
-        for(int i = 0;i<binary.length();i++){
-            
-            p=p+'1';
-
+        int num = 2;
+        while(num-1<n){
+            num*=2;
         }
-        int num = Integer.parseInt(p, 2);
-        return num;
+        return num-1;
+
+
     }
 }
