@@ -1,17 +1,16 @@
-// Last updated: 10/13/2025, 11:32:38 PM
+// Last updated: 10/31/2025, 2:25:31 PM
 class Solution {
-    public int lengthOfLongestSubstring(String s) {
-        HashMap<Character,Integer> map = new HashMap<>();
-        int maxlen= 0 ;
-        int left = 0;
-        for(int right = 0;right<s.length();right++){
-            char c = s.charAt(right);
-            if(map.containsKey(c) && map.get(c) >= left){
-                left = map.get(c)+1;
+    public int maxIceCream(int[] costs, int coins) {
+        Arrays.sort(costs);
+        int output =0 ;
+        for(int i = 0;i<costs.length;i++){
+            if(costs[i]<=coins){
+                output++;
+                coins-=costs[i];
+            }else{
+                 break;
             }
-        map.put(c,right);
-        maxlen=Math.max(maxlen,right-left+1);
         }
-        return maxlen;
+        return output;
     }
 }
