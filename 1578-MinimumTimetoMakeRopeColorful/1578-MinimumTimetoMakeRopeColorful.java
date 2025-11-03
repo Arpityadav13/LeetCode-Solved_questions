@@ -1,4 +1,4 @@
-// Last updated: 10/28/2025, 5:58:24 PM
+// Last updated: 11/3/2025, 12:55:01 PM
 class Solution {
     public int minCost(String colors, int[] neededTime) {
         int time =0;
