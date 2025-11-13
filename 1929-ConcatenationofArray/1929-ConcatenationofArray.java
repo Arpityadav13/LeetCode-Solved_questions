@@ -1,12 +1,17 @@
-// Last updated: 11/12/2025, 6:10:50 PM
+// Last updated: 11/13/2025, 7:13:14 PM
 class Solution {
-    public int[] getConcatenation(int[] nums) {
-        int n = nums.length;
-        int[] ans =new int[2*n];
-        for(int i =0;i<2*n;i++){
-            
-                ans[i]=nums[i%n];
-            
+    public int findMaxConsecutiveOnes(int[] nums) {
+        int count =0;
+        int maxcount =0;
+        for(int i=0;i<nums.length;i++){
+            if (nums[i] == 1) {
+                count++; 
+                maxcount = Math.max(maxcount, count);
+            } else {
+                count = 0; 
+
+        }}
+        
+        return maxcount;
     }
-    return ans;
-}}
+}
