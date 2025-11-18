@@ -1,13 +1,12 @@
-// Last updated: 11/18/2025, 10:33:48 PM
+// Last updated: 11/18/2025, 10:35:49 PM
 class Solution {
     public boolean isOneBitCharacter(int[] bits) {
         for(int i = 0;i<bits.length;i++){
-            if(bits[i]==1){
-                i++;
-            }else{
-                if(i==bits.length-1){
+           if(i==bits.length-1){
                     return true;
                 }
+            if(bits[i]==1){
+                i++;
             }
         }
         return false;
