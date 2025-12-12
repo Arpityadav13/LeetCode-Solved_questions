@@ -1,4 +1,4 @@
-// Last updated: 12/12/2025, 10:45:30 PM
+// Last updated: 12/12/2025, 11:28:00 PM
 1class Solution {
 2    public int countCoveredBuildings(int n, int[][] buildings) {
 3
