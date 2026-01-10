@@ -1,4 +1,4 @@
-// Last updated: 1/10/2026, 9:25:30 AM
+// Last updated: 1/10/2026, 9:28:21 AM
 1class Solution {
 2    public int myAtoi(String s) {
 3
@@ -30,4 +30,3 @@
 29        return result * sign;
 30    }
 31}
-32
