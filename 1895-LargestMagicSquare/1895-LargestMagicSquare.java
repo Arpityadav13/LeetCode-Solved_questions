@@ -1,4 +1,4 @@
-// Last updated: 1/19/2026, 7:11:48 PM
+// Last updated: 1/19/2026, 7:12:23 PM
 1class Solution {
 2    public int largestMagicSquare(int[][] grid) {
 3        int m = grid.length, n = grid[0].length;
