@@ -1,17 +1,17 @@
-// Last updated: 10/27/2025, 11:28:34 AM
-class Solution {
-    public int[] twoSum(int[] nums, int target) {
-        int list[] = new int[2];
-        int i =0;
-        while(i<nums.length){
-            for(int n =i+1;n<nums.length;n++){
-                if(nums[i]+nums[n]==target){
-                    list[0]=i;
-                    list[1]=n;
-                }
-            }
-            i++;
-        }
-        return list;
-    }
-}
+// Last updated: 2/18/2026, 11:43:14 PM
+1class Solution {
+2    public int[] twoSum(int[] nums, int target) {
+3        int list[] = new int[2];
+4        int i =0;
+5        while(i<nums.length){
+6            for(int n =i+1;n<nums.length;n++){
+7                if(nums[i]+nums[n]==target){
+8                    list[0]=i;
+9                    list[1]=n;
+10                }
+11            }
+12            i++;
+13        }
+14        return list;
+15    }
+16}
