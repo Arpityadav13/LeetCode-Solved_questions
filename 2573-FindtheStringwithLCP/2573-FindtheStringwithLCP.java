@@ -1,4 +1,4 @@
-// Last updated: 3/28/2026, 11:31:47 PM
+// Last updated: 3/28/2026, 11:41:20 PM
 1class Solution {
 2
 3    class DSU {
