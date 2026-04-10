@@ -1,4 +1,4 @@
-// Last updated: 4/11/2026, 12:47:08 AM
+// Last updated: 4/11/2026, 12:47:24 AM
 1/**
 2 * Definition for a binary tree node.
 3 * public class TreeNode {
@@ -19,21 +19,20 @@
 18    public boolean isValidBST(TreeNode root) {
 19        inorder(root);
 20        for(int i =  1;i<l.size();i++){
-21            System.out.print(l.get(i)+" ");
-22            if(l.get(i)<=l.get(i-1)){
-23                return false;
-24            }
-25
-26        }
-27        return true;
-28    }
-29    private void inorder(TreeNode root){
-30        if(root == null){
-31            return;
-32        }
-33        
-34        inorder(root.left);
-35        l.add(root.val);
-36        inorder(root.right);
-37    }
-38}
+21            if(l.get(i)<=l.get(i-1)){
+22                return false;
+23            }
+24
+25        }
+26        return true;
+27    }
+28    private void inorder(TreeNode root){
+29        if(root == null){
+30            return;
+31        }
+32        
+33        inorder(root.left);
+34        l.add(root.val);
+35        inorder(root.right);
+36    }
+37}
