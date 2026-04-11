@@ -1,33 +1,42 @@
-// Last updated: 4/11/2026, 9:24:01 PM
-1/**
-2 * Definition for a binary tree node.
-3 * public class TreeNode {
-4 *     int val;
-5 *     TreeNode left;
-6 *     TreeNode right;
-7 *     TreeNode() {}
-8 *     TreeNode(int val) { this.val = val; }
-9 *     TreeNode(int val, TreeNode left, TreeNode right) {
-10 *         this.val = val;
-11 *         this.left = left;
-12 *         this.right = right;
-13 *     }
-14 * }
-15 */
-16class Solution {
-17    int sum = 0;
-18    public int rangeSumBST(TreeNode root, int low, int high) {
-19        inorder(root,low,high);
-20        return sum;
-21    }
-22    private void inorder(TreeNode root, int low, int high) {
-23        if(root == null){
-24            return;
-25        }
-26        inorder(root.left,low,high);
-27        if(root.val<=high && root.val>=low){
-28            sum +=root.val;
+// Last updated: 4/11/2026, 11:57:00 PM
+1class Solution {
+2    HashMap<Integer,Integer> map = new HashMap<>();
+3
+4    public int[] findMode(TreeNode root) {
+5        if(root == null) return new int[]{};
+6
+7        inorder(root);
+8
+9        int maxfreq = 0;
+10
+11        // ✅ find max frequency
+12        for(int val : map.keySet()){
+13            maxfreq = Math.max(maxfreq, map.get(val));
+14        }
+15
+16        List<Integer> l = new ArrayList<>();
+17
+18        // ✅ collect all values with max frequency
+19        for(int val : map.keySet()){
+20            if(map.get(val) == maxfreq){
+21                l.add(val);
+22            }
+23        }
+24
+25        // convert to array
+26        int[] arr = new int[l.size()];
+27        for (int i = 0; i < l.size(); i++) {
+28            arr[i] = l.get(i);
 29        }
-30        inorder(root.right,low,high);
-31        }
-32}
+30
+31        return arr;
+32    }
+33
+34    private void inorder(TreeNode root) {
+35        if(root == null) return;
+36
+37        inorder(root.left);
+38        map.put(root.val, map.getOrDefault(root.val, 0) + 1);
+39        inorder(root.right);
+40    }
+41}
