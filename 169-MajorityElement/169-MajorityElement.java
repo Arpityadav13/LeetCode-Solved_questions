@@ -1,19 +1,19 @@
-// Last updated: 10/13/2025, 11:31:40 PM
-class Solution {
-    public int majorityElement(int[] nums) {
-        HashMap<Integer,Integer> map = new HashMap<>();
-        for(int i = 0;i<nums.length;i++){
-            if(map.containsKey(nums[i])){
-                map.put(nums[i],map.get(nums[i])+1);
-            }else{
-                map.put(nums[i],1);
-            }
-        }
-        Set<Integer> keyset = map.keySet();
-        for(Integer key : keyset){
-            if(map.get(key)>nums.length/2){
-                return key;
-            }
-        }return -1;
-    }
-}
+// Last updated: 5/8/2026, 9:57:24 AM
+1class Solution {
+2    public int majorityElement(int[] nums) {
+3        int count =0;
+4        int element = nums[0];
+5        for(int num : nums){
+6            if(count == 0){
+7                element =num;
+8                count++;
+9            }
+10            else if(element != num){
+11                count--;
+12            }else{
+13                count++;
+14            }
+15        }
+16        return element;
+17    }
+18}
