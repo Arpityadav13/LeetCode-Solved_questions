@@ -1,14 +1,12 @@
-// Last updated: 10/13/2025, 11:32:14 PM
-class Solution {
-    public int maxSubArray(int[] nums) {
-        int currSum = nums[0];
-        int maxSum = nums[0];
-
-        for (int i = 1; i < nums.length; i++) {
-            currSum = Math.max(nums[i], currSum + nums[i]);
-            maxSum = Math.max(maxSum, currSum);
-        }
-
-        return maxSum;
-    }
-}
+// Last updated: 5/8/2026, 3:53:17 PM
+1class Solution {
+2    public int maxSubArray(int[] nums) {
+3        int currsum = nums[0];
+4        int maxsum = nums[0];
+5        for(int i= 1 ;i<nums.length;i++){
+6            currsum = Math.max(currsum+nums[i],nums[i]);
+7            maxsum = Math.max(maxsum,currsum);
+8        }
+9        return maxsum;
+10    }
+11}
