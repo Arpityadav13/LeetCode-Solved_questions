@@ -1,26 +1,22 @@
-// Last updated: 3/15/2026, 12:50:03 PM
+// Last updated: 5/19/2026, 7:18:21 PM
 1class Solution {
-2    private List<List<Integer>> result = new ArrayList<>();
-3    
-4    public List<List<Integer>> combine(int n, int k) {
-5        List<Integer> temp = new ArrayList<>();
-6        solve(1,n,temp,k);
-7        return result;
-8    }
-9    public void solve(int start,int n ,List<Integer> temp,int k){
-10        if(k==0){
-11            result.add(new ArrayList<>(temp));
-12            return;
-13        }
-14        if(start>n){
-15            return;
-16
-17        }
-18        temp.add(start);
-19        solve(start+1,n,temp,k-1);
-20        temp.remove(temp.size()-1);
-21        solve(start+1,n,temp,k);
-22    }
-23}
-24
-25
+2    private List<List<Integer>> list = new ArrayList<>();
+3    public List<List<Integer>> combine(int n, int k) {
+4        List<Integer> l  = new ArrayList<>();
+5        solve(1,n,l,k);
+6        return list;
+7    }
+8    public void solve(int start,int n , List<Integer> temp , int k){
+9        if(k==0){
+10            list.add(new ArrayList<>(temp));
+11            return ;
+12        }
+13        if(start>n){
+14            return;
+15        }
+16        temp.add(start);
+17        solve(start+1,n,temp,k-1);
+18        temp.remove(temp.size()-1);
+19        solve(start+1,n,temp,k);
+20    }
+21}
