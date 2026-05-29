@@ -1,10 +1,10 @@
-// Last updated: 5/29/2026, 10:08:30 PM
+// Last updated: 5/29/2026, 10:09:18 PM
 1class Solution {
 2
 3    public int minDistance(String word1, String word2) {
-4    int[][] t = new int[501][501];
-5    int m = word1.length();
-6    int n = word2.length();
+4    int m = word1.length();
+5    int n = word2.length();
+6    int[][] t = new int[m+1][n+1];
 7     for (int i = 0; i <= m; i++) {
 8            t[i][0] = i;
 9        }
