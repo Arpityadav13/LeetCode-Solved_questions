@@ -1,4 +1,4 @@
-// Last updated: 6/3/2026, 11:21:04 PM
+// Last updated: 6/3/2026, 11:21:10 PM
 1class Solution {
 2    int[] t;
 3    public int minCostClimbingStairs(int[] cost) {
